@@ -17,7 +17,7 @@ warnings.filterwarnings("ignore")
 # files = os.listdir('scripts_files')
 
 
-file = open("iqde/data/sber.png", "rb")
+file = open("iqde/data/logo.png", "rb")
 image = file.read()
 logo_img = widgets.Image(
     value=image,

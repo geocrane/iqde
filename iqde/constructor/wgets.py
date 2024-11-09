@@ -14,7 +14,7 @@ import iqde.constructor.actions as func
 
 warnings.filterwarnings("ignore")
 
-file = open("iqde/data/sber.png", "rb")
+file = open("iqde/data/logo.png", "rb")
 image = file.read()
 logo_img = widgets.Image(
     value=image,
