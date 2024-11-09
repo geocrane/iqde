@@ -163,3 +163,4 @@ cython_debug/
 
 # dbases
 .db
+local.db
