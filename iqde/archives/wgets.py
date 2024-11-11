@@ -1,7 +1,7 @@
 import ipywidgets as widgets
 
 
-import iqde.archives.layouts as layout
+import iqde.layouts as layout
 from iqde.models import Replics
 
 import iqde.archives.actions as func
@@ -59,7 +59,7 @@ save_script_btn = widgets.Button(layout=layout.btn, description="save_script_btn
 
 # Архивы
 text7 = widgets.Label(value="load archived:")
-select_archive = widgets.Select(layout=layout.select_fixed)
+archive = widgets.Select(layout=layout.select_fixed)
 load_archive_btn = widgets.Button(layout=layout.btn, description="GET")
 
 read_file = widgets.FileUpload(description="LOAD FILE", accept=".sql", multiple=False)
@@ -91,7 +91,7 @@ replics = Replics.objects.all().to_list()
 select_replic.options = [replic.system_name for replic in replics]
 
 # Устанавливаем список архивных скриптов, доступных к загрузке
-func.set_saved_scripts(select_archive)
+func.set_saved_scripts(archive)
 
 
 # Обсерверы для обновления таблиц, полей
@@ -128,7 +128,7 @@ def construct_sql(btn):
 
 def load_sql(btn):
     func.load_sql(
-        select_archive,
+        archive,
         sql_redactor,
         input_script_name,
         save_script_btn,
@@ -150,7 +150,7 @@ input_script_name.observe(check_unique_sql_name, "value")
 
 
 def save_sql(btn):
-    func.save_sql(input_script_name, joins_info, sql_redactor, select_archive)
+    func.save_sql(input_script_name, joins_info, sql_redactor, archive)
 
 
 save_script_btn.on_click(save_sql)

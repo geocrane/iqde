@@ -1,7 +1,7 @@
 css = """
 <style>
 .btn{
-    background-color: #00BB27;
+    background-color: gray;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -18,7 +18,7 @@ css = """
 }
 
 .btn2{
-    background-color: #00BB27;
+    background-color: gray;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -38,7 +38,7 @@ css = """
 
 
 .btn-c{
-    background-color: #4573CA;
+    background-color: gray;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -55,7 +55,7 @@ css = """
 }
 
 .btn2-c{
-    background-color: #4573CA;
+    background-color: gray;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -75,7 +75,7 @@ css = """
 
 
 .read-file-btn{
-    background-color: #4573CA;
+    background-color: gray;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -93,75 +93,34 @@ css = """
     height: 210px;
     overflow-x: hidden;
 }
-.text{
-    color: white;
-    font-size: 14px;
+
+.joins_info{
+    border-radius: 10px;
+    border: solid 1px gray;
+    padding: 20px;
+    margin: 20px 0px 30px 0px;
 }
-.provide_accordion{
-    background: linear-gradient(to bottom right, #326124, #0F3110);
+
+.text{
+    font-size: 14px;
 }
 
 .select-multiple{
     background-color: #000;
 }
 
-.custom_accordion{
-    background: linear-gradient(to bottom right, #2B4F7D, #404189);
-}
+
 .select_replic{
     border-radius: 10px;
 }
 
-.select_replic select{
-    background-color: #E9E9E9;
-}
-
-.select_tables select{
-    background-color: #E9E9E9;
-}
-.select_attrs select{
-    background-color: #E9E9E9;
-}
-.joins_info_p{
-    border-radius: 10px;
-    font-color: white;
-    padding: 20px;
-    background: linear-gradient(to right, #D8FFBA, #012B01);
-}
-.joins_info_c{
-    border-radius: 10px;
-    font-color: white;
-    padding: 20px;
-    background: linear-gradient(to right, #B4C7E0, #070C45);
-}
-
-.subscribe_name input{
-    background-color: #E9E9E9;
-}
-
-.select_from select{
-    background-color: #E9E9E9;
-}
-
-.joins_type{
-
-}
-.sql_redactor{
-
-}
-
-.sql_redactor textarea {
-  background-color: #E9E9E9;
-}
-
-.input_script_name{
-
-}
 .accordion{
+    border: solid 1px gray;
+    border-radius: 10px;
     padding: 75px;
 }
 .get_joins_btn{
-    margin-left: 870px;
+    margin-left: 570px;
 }
 .add_subscribe_name_btn{
     margin-left: 10px;
@@ -169,15 +128,12 @@ css = """
 
 select, input, textarea{
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) inset,
-             3px 3px 20px rgba(0, 0, 0, 0.25);
-    background-color: red;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.25);
 }
 .logo{
     width: 500px;
     margin-top: 25px;
     font-size: 20px;
-    color: white;
     font-family: 'Arial', 'Verdana', sans-serif;
 }
 .logo-img{
@@ -196,3 +152,26 @@ select, input, textarea{
 }
 </style>
 """
+
+# .select_replic select{
+#     background-color: #E9E9E9;
+# }
+
+# .select_tables select{
+#     background-color: #E9E9E9;
+# }
+# .select_attrs select{
+#     background-color: #E9E9E9;
+# }
+
+# .subscribe_name input{
+#     background-color: #E9E9E9;
+# }
+
+# .select_from select{
+#     background-color: #E9E9E9;
+# }
+
+# .sql_redactor textarea {
+#   background-color: #E9E9E9;
+# }

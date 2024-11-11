@@ -1,5 +1,5 @@
 import ipywidgets as widgets
-import iqde.archives.layouts as layout
+import iqde.layouts as layout
 import iqde.archives.wgets as cwg
 
 # Подключение стилей css
@@ -9,6 +9,7 @@ cwg.logo_img.add_class("logo-img")
 cwg.save_script_btn.add_class("btn-c")
 cwg.load_archive_btn.add_class("btn2-c")
 cwg.joins_info.add_class("joins_overflow")
+cwg.joins_info.add_class("joins_info")
 
 cwg.read_file.add_class("read-file-btn")
 
@@ -28,10 +29,10 @@ cwg.select_tables.add_class("select_tables")
 
 cwg.select_attrs.add_class("select_attrs")
 
-cwg.joins_info.add_class("joins_info_c")
+
 # cwg.subscribe_name.add_class("subscribe_name")
 
-cwg.select_archive.add_class("select_archive")
+cwg.archive.add_class("select_archive")
 cwg.select_from.add_class("select_from")
 cwg.joins_type.add_class("joins_type")
 cwg.sql_redactor.add_class("sql_redactor")
@@ -72,9 +73,7 @@ constructor = widgets.VBox(
 read_file_and_label = widgets.VBox(children=[cwg.read_file, cwg.read_file_label])
 read_file_and_label.add_class("read_file_and_label")
 
-select_archive_and_file = widgets.HBox(
-    children=[cwg.select_archive, read_file_and_label]
-)
+select_archive_and_file = widgets.HBox(children=[cwg.archive, read_file_and_label])
 
 archives = widgets.VBox(
     layout=layout.archives,
@@ -90,5 +89,4 @@ accordion = widgets.VBox(
     children=[logo_box, archives, explore, constructor],
     selected_index=1,
 )
-accordion.add_class("custom_accordion")
 accordion.add_class("accordion")

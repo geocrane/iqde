@@ -31,7 +31,7 @@ def bfs(graph, start):
 
 
 def get_join_list(select_replic, select_attrs):
-    replic = Replics.objects.get(system_name=select_replic.value)
+    replic = select_replic.value
     attrs = select_attrs.value
     tables_ids = []
     attrs_ids = []
@@ -172,12 +172,14 @@ def get_join_string(df_from, visited_groups, select_from, joins_type):
         return strings
 
 
-def get_joins(select_replic, select_attrs, joins_info, select_from, joins_type):
-    table_join_list, edges = get_join_list(select_replic, select_attrs)
-    df_from, visited_groups = get_linked_tables(table_join_list, edges, select_from)
-    join_string = get_join_string(df_from, visited_groups, select_from, joins_type)
+def get_joins(wg):
+    table_join_list, edges = get_join_list(wg.replics, wg.attrs)
+    df_from, visited_groups = get_linked_tables(table_join_list, edges, wg.select_from)
+    join_string = get_join_string(
+        df_from, visited_groups, wg.select_from, wg.joins_type
+    )
 
-    replic = Replics.objects.get(system_name=select_replic.value)
+    replic = wg.replics.value
     replic_name = replic.system_name
     joins = []
 
@@ -216,7 +218,7 @@ def get_joins(select_replic, select_attrs, joins_info, select_from, joins_type):
 
         join_msg += msg
 
-    with joins_info:
+    with wg.joins_info:
         clear_output()
         print(join_msg)
 
